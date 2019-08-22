@@ -2,10 +2,13 @@ pipeline {
     agent {
             label 'docker'
     }
+    environment {
+            USER_NAMED = 'WILLY'
+    }
     stages {
         stage('One') {
                 steps {
-                        echo 'Hi, this is Willy Cedric'
+                        echo '$USER_NAMED'
 			
                 }
         }
