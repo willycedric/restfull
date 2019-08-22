@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-            label "docker"
-    }
+    agent any
     stages {
         stage('One') {
                 steps {
@@ -36,7 +34,7 @@ pipeline {
                         agent {
                                 docker {
                                         reuseNode false
-					                    image 'ubuntu'
+					image 'ubuntu'
                                 }
 			}
 				steps {
