@@ -6,9 +6,15 @@ pipeline {
             USER_NAMED = 'WILLY'
     }
     stages {
+        stage('Build') {
+            steps {
+                sh 'printenv'
+            }
+        }
         stage('One') {
                 steps {
-                        echo '$USER_NAMED'
+                       
+                        echo USER_NAMED
 			
                 }
         }
