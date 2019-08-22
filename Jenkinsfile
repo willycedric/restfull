@@ -32,10 +32,10 @@ pipeline {
                         }
                         stage('Integration test') {
                         agent {
-                                Mac-auto-0003 {
+                                docker {
                                         reuseNode false
-					image 'ubuntu'
-                                        }
+					                    image 'ubuntu'
+                                }
 			}
 				steps {
 					echo 'Running the integration test..'
